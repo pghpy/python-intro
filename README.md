@@ -47,7 +47,7 @@ Let’s build a search engine! It will give us the opportunity to learn some Pyt
 
 Setup account: Go to [www.pythonanywhere.com](http://www.pythonanywhere.com) and create an account. There should be a free option!
 
-Hello World: Create a new file (e.g.: "mycode.py"); copy-and-paste the following code into it: print "Hello, World!" Click "Save & Run". Luxuriate in the glory that is a console screen with the words "Hello, World!". You ARE a programmer today!
+Hello World: Create a new file (e.g.: "mycode.py"); copy-and-paste the following code into it: `print "Hello, World!"` Click "Save & Run". Luxuriate in the glory that is a console screen with the words "Hello, World!". You ARE a programmer today!
 
 Tonight's library 'o code: Delete the contents from mycode.py; replace by copy-and-pasting the following chunk 'o code:
 
