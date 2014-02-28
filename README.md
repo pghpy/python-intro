@@ -12,31 +12,31 @@
 
 ## Advertisement
 
-“Tired of Java, C++, Go, Ada, Pascal, Assembler, JavaScript, PHP, Ruby, and Visual Basic?
-Longing to learn Python?
-Jealous of how cool your Pythonista friends are?
-Bored by lesser serpents?
+“Tired of Java, C++, Go, Ada, Pascal, Assembler, JavaScript, PHP, Ruby, and Visual Basic?  
+Longing to learn Python?  
+Jealous of how cool your Pythonista friends are?  
+Bored by lesser serpents?  
 LEARN PYTHON WITH THE PITTSBURGH PYTHON GROUP!
 
 Join us as Steve Gross guides you on a wondrous journey of Writing a Search Engine! We'll traverse the web! Index its contents!”
 
-This doc: https://github.com/pghpy/python-intro
+This doc: https://github.com/pghpy/python-intro  
 Editor site: http://www.pythonanywhere.com
 
 
 ## Overview & Intro
 
-Hi everyone!
-I'm Steve, a Googler! Now let's learn everyone's name :)
-Most importantly, before anything else: happy hour @ Social afterwards!
-What's Pittsburgh Python? Who's involved?
-Recruiting @ Google.
-Stratification by talent: who's totally new to coding? Who's ok at coding but new to Python? Who's good with python?
-We'll divide into groups of 5. Please make sure to link up with at least someone in each of those 3 groups.
-This workshop is structured in 6 15-minute increments. We'll keep it on schedule!
-Pull out that laptop and connect to the free free free Google WiFi!!!
-BTW: You'll notice that I embedded lots of links in this doc. They're there to help you!
-Note also that each exercise builds on the last one. Don't delete your work when you're done with an exercise; the next one will use the work from the last one.
+Hi everyone!  
+I'm Steve, a Googler! Now let's learn everyone's name :)  
+Most importantly, before anything else: happy hour @ Social afterwards!  
+What's Pittsburgh Python? Who's involved?  
+Recruiting @ Google.  
+Stratification by talent: who's totally new to coding? Who's ok at coding but new to Python? Who's good with python?  
+We'll divide into groups of 5. Please make sure to link up with at least someone in each of those 3 groups.  
+This workshop is structured in 6 15-minute increments. We'll keep it on schedule!  
+Pull out that laptop and connect to the free free free Google WiFi!!!  
+BTW: You'll notice that I embedded lots of links in this doc. They're there to help you!  
+Note also that each exercise builds on the last one. Don't delete your work when you're done with an exercise; the next one will use the work from the last one.  
 If you are really stuck, there's a full solution [here](https://github.com/pghpy/python-intro/blob/master/solutions.py).
 
 This class is intended for people with little programming background, but a decent understanding of logic, arithmetic, etc.
@@ -98,10 +98,10 @@ def CrawlForLinks(url, ExtractLinksFunction, depth=0):
 
 ## Fetch the content of a web page
 
-So, we're going to grab a web page. That's actually something called an "HTTP get" operation. A web page is actually a document, right? Let's see what that document looks like (we'll pull up CNN.com and inspect the source). Woohoo! A text document! No pretty pictures, but if you dig through it you can find parts that look familiar. So to get a web page we need to specify a URL to some web-page-fetching mechanism.
-Also, to do this we're going to let the user specify on the console which URL to get. That means we'll need to get user input working.
-Also: Note that I've embedded clickable links in the coding challenge to help you look up how to do things. Saving you time, right?
-Also: Note that Pythonanywhere may restrict which URLs you can use; see this document for a list.
+So, we're going to grab a web page. That's actually something called an "HTTP get" operation. A web page is actually a document, right? Let's see what that document looks like (we'll pull up CNN.com and inspect the source). Woohoo! A text document! No pretty pictures, but if you dig through it you can find parts that look familiar. So to get a web page we need to specify a URL to some web-page-fetching mechanism.  
+Also, to do this we're going to let the user specify on the console which URL to get. That means we'll need to get user input working.  
+Also: Note that I've embedded clickable links in the coding challenge to help you look up how to do things. Saving you time, right?  
+Also: Note that Pythonanywhere may restrict which URLs you can use; see this document for a list.  
 
 Coding challenge: Ask the user for a URL, fetch the webpage and print it to the screen.
 
@@ -208,6 +208,6 @@ Coding challenge: Ask the user for a word to search for, and report the best URL
 
 Contact info:
 
-Steve Gross
-mrstevegross@gmail.com
+Steve Gross  
+mrstevegross@gmail.com  
 @mrstevegross (twitter)
