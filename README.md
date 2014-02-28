@@ -35,7 +35,7 @@ Stratification by talent: who's totally new to coding? Who's ok at coding but ne
 We'll divide into groups of 5. Please make sure to link up with at least someone in each of those 3 groups.  
 This workshop is structured in 6 15-minute increments. We'll keep it on schedule!  
 Pull out that laptop and connect to the free free free Google WiFi!!!  
-BTW: You'll notice that I embedded lots of links in this doc. They're there to help you!  
+BTW: You'll notice that I embedded lots of [links](http://en.wikipedia.org/wiki/Hyperlink) in this doc. They're there to help you!  
 Note also that each exercise builds on the last one. Don't delete your work when you're done with an exercise; the next one will use the work from the last one.  
 If you are really stuck, there's a full solution [here](https://github.com/pghpy/python-intro/blob/master/solutions.py).
 
@@ -45,7 +45,7 @@ Let’s build a search engine! It will give us the opportunity to learn some Pyt
 
 ## Set up PythonAnywhere account; hello world; initial code
 
-Setup account: Go to www.pythonanywhere.com and create an account. There should be a free option!
+Setup account: Go to [www.pythonanywhere.com](http://www.pythonanywhere.com) and create an account. There should be a free option!
 
 Hello World: Create a new file (e.g.: "mycode.py"); copy-and-paste the following code into it: print "Hello, World!" Click "Save & Run". Luxuriate in the glory that is a console screen with the words "Hello, World!". You ARE a programmer today!
 
@@ -101,41 +101,41 @@ def CrawlForLinks(url, ExtractLinksFunction, depth=0):
 So, we're going to grab a web page. That's actually something called an "HTTP get" operation. A web page is actually a document, right? Let's see what that document looks like (we'll pull up CNN.com and inspect the source). Woohoo! A text document! No pretty pictures, but if you dig through it you can find parts that look familiar. So to get a web page we need to specify a URL to some web-page-fetching mechanism.  
 Also, to do this we're going to let the user specify on the console which URL to get. That means we'll need to get user input working.  
 Also: Note that I've embedded clickable links in the coding challenge to help you look up how to do things. Saving you time, right?  
-Also: Note that Pythonanywhere may restrict which URLs you can use; see this document for a list.  
+Also: Note that Pythonanywhere may restrict which URLs you can use; see [this](https://www.pythonanywhere.com/whitelist/) document for a list.  
 
 Coding challenge: Ask the user for a URL, fetch the webpage and print it to the screen.
 
-```python
+<pre>
 # CHALLENGE BEGINS
-# Fetch user input with raw_input(), and store it in a variable
-#url = CallTheRawInputFunction("WithAPromptHere")
-# Invoke GetWebPage() and store the result in a variable
-#result = CallTheGetWebPageFunction(WithTheUrlHere)
-# Print the result to the screen
-#CallThePrintFunction(WithTheResultHere)
+# Fetch user input with <a href="http://docs.python.org/2/library/functions.html#raw_input">raw_input()</a>, and <a href="http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/variables.html">store it in a variable</a>
+<strong>#url = CallTheRawInputFunction("WithAPromptHere")</strong>
+# Invoke GetWebPage() and <a href="http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/variables.html">store the result in a variable</a>
+<strong>#result = CallTheGetWebPageFunction(WithTheUrlHere)</strong>
+# <a href="http://docs.python.org/2/reference/simple_stmts.html#the-print-statement">Print the result</a> to the screen
+<strong>#CallThePrintFunction(WithTheResultHere)</strong>
 # CHALLENGE ENDS
-```
+</pre>
 
 ## Identify how often each word occurs in the page
 
-Great, we fetched a web page. But we want to a build a search engine, right? Fetching a page is only the beginning. Typically, when you search on the web you do so with a keyword. For instance, will Google please tell me where to find "apples"? Aha! A search result page; each page has the word "apples" on it in some meaningful way. Plus, Google probably has done a little more work figuring out the best pages for my search. Probably, right?
+Great, we fetched a web page. But we want to a build a search engine, right? Fetching a page is only the beginning. Typically, when you search on the web you do so with a keyword. For instance, will Google please tell me where to find "apples"? Aha! A search result page; each page has the word "[apples](https://www.google.com/search?q=apples)" on it in some meaningful way. Plus, Google probably has done a little more work figuring out the best pages for my search. Probably, right?
 
 Let's dig deeper into this problem. Let's identify all the words on a web page and count how often each one occurs. To do this, we'll use a the WordOccurences class supplied in the library at the top. The instance of this class is called "occurrences"; it provides several functions. The function you'll care about in this exercise is called "RecordOccurrence".
 
 Coding challenge: Identify how often each word occurs in the page.
 
-```python
+<pre>
 # CHALLENGE BEGINS
-def RecordOccurrences(url, webpage):
-# Split the page into words, and store those words in a list:
-#   mywords = myresult.SomeSplitFunction()
+<strong>def RecordOccurrences(url, webpage):</strong>
+# <a href="http://docs.python.org/2/library/stdtypes.html#str.split">Split the page</a> into words, and store those words in a list:
+<strong>#   mywords = myresult.SomeSplitFunction()</strong>
 # Loop across the words and record each occurrence:
-#   for SomeWord in MyListOfWords:
+<strong>#   for SomeWord in MyListOfWords:
 #     InvokeRecordOccurrenceSomeHowHere(UsingSomeWord)
 RecordOccurrences(url, webpage)
-occurrences.Print()
+occurrences.Print()</strong>
 # CHALLENGE ENDS
-```
+</pre>
 
 ## Extract anchor tags from document
 
@@ -147,29 +147,29 @@ And sometimes it looks like this:
   `<a href="/some/path/here">My link!</a>`
 Ummmmm.... What happened to the "http://someotherpage.com" part? It's implicitly on the same site!
 
-In order to build a search engine, we need to spider the web (also called "crawling"). To start with that, we need to identify all the links in a page. Fortunately for you, you do not have to learn HTML/XML parsing or RegEx (regular expressions). But somehow, we need to get all the links out of our webpage, right? Mercifully, this workshop has already included a function to get the links out of a page. 
+In order to build a search engine, we need to [spider the web](http://en.wikipedia.org/wiki/Web_crawler) (also called "crawling"). To start with that, we need to identify all the links in a page. Fortunately for you, you do not have to learn HTML/XML parsing or RegEx ([regular expressions](http://en.wikipedia.org/wiki/Regular_expression)). But somehow, we need to get all the links out of our webpage, right? Mercifully, this workshop has already included a function to get the links out of a page. 
 
 Coding challenge: Extract all the links from your page, and make sure all of them include a leading "http://somesite" portion.
 
-```python
+<pre>
 # CHALLENGE BEGINS
-def GetCleanedUpLinks(url):
+<strong>def GetCleanedUpLinks(url):</strong>
 # InvokeTheGetLinksFunction and store the results in a list:
-#  ListOfLinks = CallTheGetLinksFunction(WithYourWebPageHere)
+<strong>#  ListOfLinks = CallTheGetLinksFunction(WithYourWebPageHere)</strong>
 # Create a new empty list of cleaned-up links:
-#  ListOfCleanedUpLinks = New Empty List
+<strong>#  ListOfCleanedUpLinks = <a href="http://stackoverflow.com/questions/2972212/creating-an-empty-list-in-python">New Empty List</a></strong>
 # Loop across the links; add each one to the cleaned up list,
 # ensuring that it starts with a valid "http://..." portion.
-#  for link in ListOfLinks:
-#    if link starts with "http://":
+<strong>#  for link in ListOfLinks:
+#    if link <a href="http://www.tutorialspoint.com/python/string_startswith.htm">starts with</a> "http://":
 #      Just add it to ListOfCleanedUpLinks
 #    else:
 #      Add together URL and the link, then add THAT to the
 #      ListOfCleanedUpLinks
 #  return ListOfCleanedUpLinks
-print GetCleanedUpLinks(url)
+print GetCleanedUpLinks(url)</strong>
 # CHALLENGE ENDS
-```
+</pre>
 
 ## Visit each link and record how often each word occurs
 
@@ -177,17 +177,17 @@ Now we start putting this all together into something useful. We'll start with t
 
 Coding challenge: Crawl the web, and record word occurences for each crawled page.
 
-```python
+<pre>
 # CHALLENGE BEGINS
-AllLinks = CallTheCrawlForLinksFunction(GetCleanedUpLinks)
+<strong>AllLinks = CallTheCrawlForLinksFunction(GetCleanedUpLinks)</strong>
 # Loop across the links; for each one, fetch the webpage and
 # record the word occurrences:
-#  for link in AllLinks:
+<strong>#  for link in AllLinks:
 #    webpage = CallTheGetWebPageFunction(WithALink)
 #    CallTheRecordOccurrencesFunction(WithTheWebPage)
-occurrences.Print()
+occurrences.Print()</strong>
 # CHALLENGE ENDS
-```
+</pre>
 
 ## Provide a user interface to request which page(s) are best matches for which word(s)
 
@@ -195,16 +195,16 @@ Let's tie it all together. We'll have the user request a particular word, and ou
 
 Coding challenge: Ask the user for a word to search for, and report the best URL for that word.
 
-```python
+<pre>
 # CHALLENGE BEGINS
 # Ask the user for a word to search for:
-#WordToSearchFor = CallTheRawInputFunction("WithAPromptHere")
+<strong>#WordToSearchFor = CallTheRawInputFunction("WithAPromptHere")</strong>
 # Get the best URL for that word:
-#bestUrl = occurrences.CallTheGetBestFunction(ForTheWord)
+<strong>#bestUrl = occurrences.CallTheGetBestFunction(ForTheWord)</strong>
 # Print the best URL to the screen:
-#CallThePrintFunction(WithTheBestUrl)
+<strong>#CallThePrintFunction(WithTheBestUrl)</strong>
 # CHALLENGE ENDS
-```
+</pre>
 
 Contact info:
 
