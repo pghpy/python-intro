@@ -4,7 +4,6 @@ import urllib2
 
 
 class WordOccurrences:
-
     def __init__(self):
         self.occurrences = dict()
 
@@ -24,9 +23,6 @@ class WordOccurrences:
                 self.occurrences[word][url] = 1
         else:
             self.occurrences[word] = {url: 1}
-
-    #def print(self):
-    #    print self.occurrences
 
     def get_best_url_for_word(self, word):
         if word in self.occurrences:
@@ -63,11 +59,12 @@ def crawl_for_links(url, extract_links_function, depth=0):
 # Fetch the content of a web page:
 url = raw_input("give me a url: ")
 webpage = get_web_page(url)
+
+print 'Raw HTML from {}:'.format(url)
 print webpage
+print '------------------------------------'
 
 # Identify how often each word occurs in the page:
-
-
 def record_occurrences(url, webpage):
     words = webpage.split()
     for word in words:
@@ -77,8 +74,6 @@ record_occurrences(url, webpage)
 print occurrences
 
 # Extract anchor tags from document:
-
-
 def get_cleaned_links(url):
     webpage = get_web_page(url)
     links = get_links(webpage)
@@ -90,7 +85,9 @@ def get_cleaned_links(url):
             cleaned_links.append(url + link)
     return cleaned_links
 
+print 'Cleaned up links: '
 print get_cleaned_links(url)
+print '------------------------------------'
 
 # Visit each link and record how often each word occurs:
 all_links = crawl_for_links(url, get_cleaned_links)
@@ -103,4 +100,5 @@ print occurrences
 # Provide a user interface to request best page for a word:
 word = raw_input("word to search for: ")
 best_url = occurrences.get_best_url_for_word(word)
+
 print best_url
