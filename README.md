@@ -20,7 +20,7 @@ LEARN PYTHON WITH THE PITTSBURGH PYTHON GROUP!
 
 Join us as Steve Gross guides you on a wondrous journey of Writing a Search Engine! We'll traverse the web! Index its contents!”
 
-This doc: https://docs.google.com/document/d/1OtQeCy41deVoEXiYS7T5evjZtLqd_Uxnh5XqZ6h1o9M/edit
+This doc: https://github.com/pghpy/python-intro
 Editor site: http://www.pythonanywhere.com
 
 
@@ -37,7 +37,7 @@ This workshop is structured in 6 15-minute increments. We'll keep it on schedule
 Pull out that laptop and connect to the free free free Google WiFi!!!
 BTW: You'll notice that I embedded lots of links in this doc. They're there to help you!
 Note also that each exercise builds on the last one. Don't delete your work when you're done with an exercise; the next one will use the work from the last one.
-If you are really stuck, there's a full solution [here](https://docs.google.com/document/d/16x1dJ6V0z1IgHuLe_WMtGgGG7MfCbMBbJ3a69czA1AM/edit#).
+If you are really stuck, there's a full solution [here](https://github.com/pghpy/python-intro/blob/master/solutions.py).
 
 This class is intended for people with little programming background, but a decent understanding of logic, arithmetic, etc.
 
